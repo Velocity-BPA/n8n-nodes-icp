@@ -1,0 +1,25 @@
+# Source files (use dist/)
+nodes/
+credentials/
+test/
+scripts/
+
+# Config files
+.eslintrc.js
+.prettierrc
+.gitignore
+tsconfig.json
+jest.config.js
+
+# IDE
+.idea/
+.vscode/
+
+# Development
+*.log
+coverage/
+.nyc_output/
+
+# Git
+.git/
+.github/

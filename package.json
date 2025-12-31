@@ -1,0 +1,95 @@
+{
+  "name": "n8n-nodes-icp",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Internet Computer Protocol (ICP) blockchain providing 8 resources and 60+ operations for ledger transactions, canister management, governance, and ICRC token standards.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-icp.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-icp#readme",
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-icp/issues"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "icp",
+    "internet-computer",
+    "dfinity",
+    "blockchain",
+    "canister",
+    "web3",
+    "cryptocurrency",
+    "icrc",
+    "nns",
+    "sns",
+    "rosetta"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/IcpAgent.credentials.js",
+      "dist/credentials/IcpRosetta.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Icp/Icp.node.js",
+      "dist/nodes/Icp/IcpTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && npm run copy-icons",
+    "copy-icons": "copyfiles -u 1 \"nodes/**/*.svg\" \"nodes/**/*.png\" dist/",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^1.0.0",
+    "@dfinity/candid": "^1.0.0",
+    "@dfinity/identity": "^1.0.0",
+    "@dfinity/principal": "^1.0.0",
+    "axios": "^1.6.0",
+    "bip39": "^3.1.0",
+    "js-sha256": "^0.11.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.0",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.22.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
