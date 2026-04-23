@@ -2,7 +2,7 @@
   "name": "n8n-nodes-icp",
   "version": "1.0.0",
   "description": "A comprehensive n8n community node for Internet Computer Protocol (ICP) blockchain providing 8 resources and 60+ operations for ledger transactions, canister management, governance, and ICRC token standards.",
-  "license": "BUSL-1.1",
+  "license": "SEE LICENSE IN LICENSE.md",
   "author": {
     "name": "Velocity BPA",
     "email": "licensing@velobpa.com",
@@ -80,7 +80,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.0",
     "jest": "^29.7.0",
-    "n8n-workflow": "^1.22.0",
+    "n8n-workflow": "1.57.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.1",
